@@ -224,7 +224,7 @@ class ArbolBinarioBusqueda:
             print(arbol.clave)            
             self._preorden(arbol.hijoIzquierdo)
             self._preorden(arbol.hijoDerecho)
-    #Implementacion William
+    #Implementacion del GRUPO
     def __iter__(self):
         return self.inorden_claves()  # Llama a un nuevo método inorden_claves().
     def inorden_claves(self):
@@ -236,14 +236,3 @@ class ArbolBinarioBusqueda:
             yield from self._inorden_claves(arbol.hijoIzquierdo)
             yield from self._inorden_claves(arbol.hijoDerecho)
 
-
-"""
-miArbol = ArbolBinarioBusqueda()
-miArbol[3]="rojo"
-miArbol[4]="azul"
-miArbol[6]="amarillo"
-miArbol[2]="en"
-
-print(miArbol[6])
-print(miArbol[2])
-"""
